@@ -1,28 +1,30 @@
 #include "main.h"
 
- /**
- * _strcat -. is a function
+/**
+ * _strcat -> this is a function
  * @dest: first parameter
  * @src: second parameter
- * return out put
+ * Return: a string
  */
 char *_strcat(char *dest, char *src)
 {
-	int i;
-	int j;
+	int x;
+	int y;
 
-	i = 0;
-	j = 0;
+	x = 0;
+	y = 0;
 
-	while (dest[i] != '\0')
+	while (dest[x] != '\0')
 	{
-		i++;
+		x++;
 	}
-	while (src[j] != '\0')
+
+	while (src[y] != '\0')
 	{
-		j++;
-		i++;
+		dest[x] = src[y];
+		y++;
+		x++;
 	}
-	dest[i] = '\0';
+	dest[x] = '\0';
 	return (dest);
 }
